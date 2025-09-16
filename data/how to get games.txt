@@ -1,0 +1,1 @@
+this.EJS_emulator.config.gameUrl

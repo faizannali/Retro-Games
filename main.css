@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/insidenav.png);
+  /* background-size: contain; */
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "PressStart2P";
+  src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-options-container {
+  color: #ffd44d;
+  font-family: "PressStart2P";
+  font-weight: 300;
+  border: 4px solid #ffd44d;
+  border-radius: 10px;
+  width: 90%;
+  padding: 15px 50px 15px 60px;
+  list-style-type: none;
+  background-color: purple;
+  background-image: url(/img/navbg.png);
+  position: relative;
+  z-index: 1;
+  background-size: contain;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  font-size: 18px;
+}
+
+.nav-options-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 2;
+}
+
+.nav-options-left {
+  display: flex;
+  gap: 20px;
+}
+
+.links {
+  color: #ffd44d;
+}
+
+.links:hover {
+  color: aliceblue;
+  transition: 0.5s all;
+}
+
+.nav-search-button {
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-family: "PressStart2P";
+  color: #ffd44d;
+  background-color: #3b388f;
+  border: 1px solid #292670;
+  box-shadow: inset 5px 0 0 0 #645aa9, inset 0 5px 0 0 #645aa9,
+    inset -5px 0 0 0 #292670, inset 0 -5px 0 0 #292670;
+  transition: text-shadow 0.5s ease;
+  text-shadow: none;
+  font-size: 16px;
+}
+
+.nav-search-button:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.search-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: none;
+}
+
+.search {
+  position: absolute;
+  right: 33px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: 5px solid #ffd44d;
+  margin-top: -15px;
+}
+
+input:focus {
+  outline-style: none;
+}
+
+.main-heading {
+  text-align: center;
+  font-family: "PressStart2P";
+  margin-top: 30px;
+  color: #ffd44d;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.download-btn {
+  margin: 0 auto;
+  padding: 20px 40px 18px 40px;
+  font-size: 25px;
+  border-radius: 15px;
+  font-family: "PressStart2P";
+  color: #ffd44d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #026cc9;
+  border: none;
+  box-shadow: inset 5px 0 0 0 #1eb3d9, /* left */ inset 0 5px 0 0 #1eb3d9,
+    /* top */ inset -5px 0 0 0 #174a91, /* right */ inset 0 -5px 0 0 #174a91; /* bottom */
+  font-weight: 300;
+  transition: text-shadow 0.5s ease;
+  text-shadow: none;
+  margin-bottom: 35px;
+}
+
+.download-btn:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.playstore-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.games-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  /* background-color: #026cc9; */
+}
+
+
+.game {
+  background-color: wheat;
+  margin-bottom: 20px;
+  border: 6px solid #ffd44d;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 22%;
+}
+
+.game-img img {
+  height: 200px;
+  width: 100%;
+}
+
+.game-title {
+  color: #ffd44d;
+  background-color: #026cc9;
+  font-family: "PressStart2P";
+  text-align: center;
+  margin: -5px;
+  padding: 10px 0px;
+  font-size: 20px;
+}

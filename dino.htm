@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadillacs and Dinosaurs</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game"></div>
+      </div>
+    <!-- <div style='width:640px;height:480px;max-width:100%'>
+        <div id='game'></div>
+    </div> -->
+    
+    <script type='text/javascript'>
+        EJS_player = '#game';
+        // Can also be fceumm or nestopia
+        EJS_core = 'fbalpha2012_cps1';
+
+       
+        // start on load
+        EJS_startOnLoad = true;
+        
+        // URL to Game rom
+        EJS_gameUrl = '/roms/dino.zip'; // https://dl.dropboxusercontent.com/s/[random-code]/mario.nes
+    </script>
+    <script src='data/loader.js'></script>
+</body>
+</html>

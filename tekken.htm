@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekken 3</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game"></div>
+    </div>
+
+    <script type='text/javascript'>
+        EJS_player = '#game';
+        EJS_core = "psx";
+
+        // Start automatically
+        EJS_startOnLoad = true;
+
+        // Game ROM location
+        EJS_gameUrl = '/roms/Tekken3.PBP';
+
+        EJS_touch_controls = true;
+       
+        EJS_VirtualGamepadSettings = [
+            {
+                type: "button",
+                text: "Y",
+                id: "y",
+                location: "right",
+                left: 40,
+                bold: true,
+                input_value: 9
+            },
+            {
+                type: "button",
+                text: "X",
+                id: "X",
+                location: "right",
+                top: 40,
+                bold: true,
+                input_value: 1
+            },
+            {
+                type: "button",
+                text: "B",
+                id: "b",
+                location: "right",
+                left: 81,
+                top: 40,
+                bold: true,
+                input_value: 8
+            },
+            {
+                type: "button",
+                text: "A",
+                id: "a",
+                location: "right",
+                left: 40,
+                top: 80,
+                bold: true,
+                input_value: 0
+            },
+        
+            //Note- the dpad and the zone will overlap in this example, this is just to show what it should look like.
+            {
+                type: "dpad",
+                location: "left",
+                left: "50%",
+                right: "50%",
+                joystickInput: false,
+                inputValues: [4, 5, 6, 7]
+            },
+            {
+                type: "button",
+                text: "Start",
+                id: "start",
+                location: "center",
+                left: 60,
+                fontSize: 15,
+                block: true,
+                input_value: 3
+            },
+            {
+                type: "button",
+                text: "Select",
+                id: "select",
+                location: "center",
+                left: -5,
+                fontSize: 15,
+                block: true,
+                input_value: 2
+            }
+        ];
+
+       
+    </script>
+
+    <script src='data/loader.js'></script>
+</body>
+</html>

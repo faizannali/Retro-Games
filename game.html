@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <link
+      id="dynamic-favicon"
+      rel="icon"
+      type="image/png"
+      href="default-favicon.png"
+    />
+    <title id="page-title"></title>
+  </head>
+  
+  <body>
+    <div id="game-container">
+      <div id="game"></div>
+    </div>
+
+    <script>
+      // Read query parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const title = urlParams.get("title") || "Game";
+      const core = urlParams.get("core") || "nes";
+      const rom = urlParams.get("rom") || "";
+
+      document.getElementById("page-title").textContent = title;
+      document.title = title;
+
+      window.EJS_player = "#game";
+      window.EJS_core = core;
+      window.EJS_startOnLoad = true;
+      window.EJS_gameUrl = rom;
+
+      // Dynamically update favicon
+       const faviconElement = document.getElementById('dynamic-favicon');
+    if (faviconElement) {
+      let faviconUrl = urlParams.get('favicon') || '/img/default-favicon.png';
+      if (!faviconUrl.startsWith('/')) {
+        faviconUrl = '/' + faviconUrl;
+      }
+      faviconElement.href = faviconUrl + '?v=' + new Date().getTime();
+    }
+    
+      window.history.replaceState({}, document.title, window.location.pathname);
+    </script>
+
+    <script src="data/loader.js"></script>
+  </body>
+</html>
