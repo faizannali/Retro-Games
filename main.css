@@ -173,7 +173,6 @@ input:focus {
   gap: 20px;
   flex-wrap: wrap;
   cursor: pointer;
-  /* background-color: #026cc9; */
 }
 
 
@@ -184,19 +183,25 @@ input:focus {
   border-radius: 10px;
   overflow: hidden;
   width: 22%;
+  height: 270px;
 }
 
-.game-img img {
-  height: 200px;
+.game img {
+  height: 80%;
   width: 100%;
 }
 
 .game-title {
   color: #ffd44d;
   background-color: #026cc9;
+  height: 21%;
   font-family: "PressStart2P";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   margin: -5px;
   padding: 10px 0px;
   font-size: 20px;
+  overflow: hidden;
 }

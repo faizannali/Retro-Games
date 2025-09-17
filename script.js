@@ -18,6 +18,14 @@ const games_database = [
     photo: "img/tekken.png",
     rom: "roms/Tekken3.PBP",
     core: "psx",
+    favicon: "favicons/tekken-favicon.png"
+  },
+  {
+    title: "SONIC THE HEDGEHOG",
+    photo: "img/sonic.png",
+    rom: "roms/sonic_the_hedgehog.zip",
+    core: "sega",
+    favicon: "favicons/sonic-favicon.png"
   },
 ];
 
@@ -29,9 +37,9 @@ function renderGames(list) {
     .map(
       (game, idx) => `
         <div class="game" data-idx="${games_database.indexOf(game)}">
-          <div class="game-img">
+
             <img src="${game.photo}" alt="${game.title}" />
-          </div>
+
           <div class="game-title">
             <p>${game.title}</p>
           </div>
@@ -49,7 +57,7 @@ function renderGames(list) {
         title: game.title,
         core: game.core,
         rom: game.rom,
-        favicon: game.favicon
+        favicon: game.favicon,
       }).toString();
       window.open(`game.html?${params}`, "_blank");
     });
