@@ -132,6 +132,12 @@ input:focus {
   margin-bottom: 30px;
 }
 
+.download-btn-container{
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
 .download-btn {
   margin: 0 auto;
   padding: 20px 40px 18px 40px;
@@ -149,7 +155,6 @@ input:focus {
   font-weight: 300;
   transition: text-shadow 0.5s ease;
   text-shadow: none;
-  margin-bottom: 35px;
 }
 
 .download-btn:hover {
