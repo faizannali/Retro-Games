@@ -4,18 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link rel="icon" type="image/png" href="favicons/retro-favicon.png" />
+
     <title>Retro Games</title>
   </head>
   <body>
     <div class="main-container">
+      <!-- Navigation -->
       <nav class="navigation">
         <ul class="nav-options-container">
           <div class="nav-options">
             <div class="nav-options-left">
               <li><a class="links" href="">HOME</a></li>
-              <li><a class="links" href="">GAMES</a></li>
+              <li><a class="links" href="">BLOGS</a></li>
               <li><a class="links" href="">ABOUT</a></li>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <h1 class="mobile-main-heading">
+              RETRO <br />
+              GAMES
+            </h1>
+
+            <div class="mobile-options">
+              <div class="openbtn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
 
             <button class="nav-search-button">SEARCH</button>
@@ -23,17 +40,31 @@
         </ul>
       </nav>
 
+      <!-- Mobile options Links Container -->
+      <div class="mobile-options-links-container">
+        <ul class="mobile-options-links" >
+          <a href=""><li>HOME</li></a>
+          <a href=""><li>BLOGS</li></a>
+          <a href=""><li>ABOUT</li></a>
+        </ul>
+
+        <div class="mobile-search-container">
+          <input class="mobile-search" type="text" placeholder="Search Games..." />
+        </div>
+      </div>
+
       <div class="search-container">
-        <input class="search" type="text" placeholder="Search here..." />
+        <input class="search" type="text" placeholder="Search Games..." />
       </div>
 
       <div class="heading-container">
-        <h1 class="main-heading">
+        <h1 class="main-heading animate__fadeInDown">
           RETRO <br />
           GAMES
         </h1>
       </div>
 
+      <!-- Download button -->
       <div class="download-btn-container">
         <a class="test" href="playstore.com" target="_blank">
           <button class="download-btn">
@@ -43,9 +74,23 @@
         </a>
       </div>
 
+      <!-- dynamically adding html here with js  -->
       <div class="games-wrapper">
-        <!-- dynamically adding html here with js  -->
+        <!-- <div class="game" data-idx="${games_database.indexOf(game)}">
+          <img src="${game.photo}" alt="${game.title}" />
+          <div class="game-title">
+            <p>${game.title}</p>
+          </div>
+        </div>` -->
       </div>
+
+      <!-- Footer -->
+       <div class="footer-container">
+        <div class="breakline"></div>
+        <h2>footer</h2>
+        
+       </div>
+
     </div>
 
     <script src="script.js"></script>

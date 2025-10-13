@@ -1,0 +1,52 @@
+@media (max-width: 639px) {
+  .game {
+    flex: 1 1 100%; /* 1 in a row for mobile */
+  }
+  .main-heading {
+    display: none;
+  }
+
+  .mobile-main-heading {
+    font-size: 20px;
+  }
+
+  .download-btn {
+    font-size: 15px;
+    padding: 15px 25px;
+  }
+  .nav-search-button {
+    display: none;
+  }
+  .nav-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-options-left {
+    display: none;
+  }
+
+  .nav-options-container {
+    padding: 10px 30px;
+  }
+
+  .mobile-options {
+    display: block;
+  }
+   
+  .mobile-main-heading{
+  display: block;
+}
+
+  .download-btn-container {
+    margin-bottom: 25px;
+  }
+
+  .mobile-active {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

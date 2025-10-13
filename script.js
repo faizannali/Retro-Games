@@ -193,6 +193,7 @@ window.addEventListener("scroll", () => {
 const search_btn = document.querySelector(".nav-search-button");
 const search = document.querySelector(".search-container");
 let user_input = document.querySelector(".search");
+let mobile_user_input = document.querySelector(".mobile-search");
 
 search_btn.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -218,5 +219,49 @@ user_input.addEventListener("input", (e) => {
   renderGames(filteredGames, currentPage);
 });
 
+mobile_user_input.addEventListener("input", (e) => {
+  const query = e.target.value.trim().toLowerCase();
+  filteredGames = games_database.filter((game) =>
+    game.title.toLowerCase().includes(query)
+  );
+  currentPage = 1; // reset page count on new search
+  renderGames(filteredGames, currentPage);
+});
+
+// Reset the input field for pc
+user_input.addEventListener("blur", () => {
+  user_input.value = ""; 
+  filteredGames = games_database; 
+  currentPage = 1; 
+  renderGames(filteredGames, currentPage); 
+});
+
+// Reset the input field for mobile
+mobile_user_input.addEventListener("blur", () => {
+  mobile_user_input.value = "";
+  filteredGames = games_database;
+  currentPage = 1;
+  renderGames(filteredGames, currentPage);
+});
+
 // Initial render
 renderGames(games_database, currentPage);
+
+const toggle_mobile_nav = document.querySelector(".openbtn");
+const mobile_nav_links_container = document.querySelector(".mobile-options-links-container");
+
+toggle_mobile_nav.addEventListener("click", () => {
+  toggle_mobile_nav.classList.toggle("active");
+  mobile_nav_links_container.classList.toggle("mobile-active");
+});
+
+// Close menu on clicking outside
+document.addEventListener("click", (event) => {
+  const isClickInsideMenu = mobile_nav_links_container.contains(event.target);
+  const isClickToggleBtn = toggle_mobile_nav.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickToggleBtn) {
+    toggle_mobile_nav.classList.remove("active");
+    mobile_nav_links_container.classList.remove("mobile-active");
+  }
+});
