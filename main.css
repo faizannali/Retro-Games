@@ -330,3 +330,48 @@ input:focus {
   margin-top: 10px;
   background-color: #ffd44d;
 }
+
+.footer-links {
+  margin-top: 15px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-family: "PressStart2P";
+  color: #fff;
+  font-size: 15px;
+  list-style: none;
+  transition: 0.5s ease ;
+}
+
+.footer-links a:hover{
+  color: #ffd44d;
+  transition: 0.5s ease;
+}
+
+.footer-website-link {
+  text-align: center;
+  margin-bottom: 20px;
+  color: aliceblue;
+  font-family: "PressStart2P";
+  font-size: 15px;
+  transition: 0.5s ease;
+}
+
+.footer-website-link:hover {
+  color: #ffd44d;
+  transition: 0.5s ease;
+}
+
+.footer-website-link a {
+  color: #ffd44d;
+  transition: 0.5s ease;
+}
+
+.footer-website-link a:hover {
+  color: #fff;
+  transition: 0.5s ease;
+}

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="icon" type="image/png" href="favicons/retro-favicon.png" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Retro Games</title>
   </head>
   <body>
@@ -16,9 +16,9 @@
         <ul class="nav-options-container">
           <div class="nav-options">
             <div class="nav-options-left">
-              <li><a class="links" href="">HOME</a></li>
-              <li><a class="links" href="">BLOGS</a></li>
-              <li><a class="links" href="">ABOUT</a></li>
+              <li><a class="links" href="index.html">HOME</a></li>
+              <li><a class="links" target="_blank" href="blogs.html">BLOGS</a></li>
+              <li><a class="links" target="_blank" href="about.html">ABOUT</a></li>
             </div>
 
             <!-- Mobile Navigation -->
@@ -41,15 +41,19 @@
       </nav>
 
       <!-- Mobile options Links Container -->
-      <div class="mobile-options-links-container">
-        <ul class="mobile-options-links" >
+      <div class="mobile-options-links-container animate__animated animate__bounceInLeft">
+        <ul class="mobile-options-links">
           <a href=""><li>HOME</li></a>
           <a href=""><li>BLOGS</li></a>
           <a href=""><li>ABOUT</li></a>
         </ul>
 
         <div class="mobile-search-container">
-          <input class="mobile-search" type="text" placeholder="Search Games..." />
+          <input
+            class="mobile-search"
+            type="text"
+            placeholder="Search Games..."
+          />
         </div>
       </div>
 
@@ -66,7 +70,7 @@
 
       <!-- Download button -->
       <div class="download-btn-container">
-        <a class="test" href="playstore.com" target="_blank">
+        <a class="test" href="https://play.google.com/store/apps/details?id=com.faizan.retrogames" target="_blank">
           <button class="download-btn">
             DOWNLOAD
             <img class="playstore-icon" src="/img/playstore.png" alt="" />
@@ -84,13 +88,19 @@
         </div>` -->
       </div>
 
-      <!-- Footer -->
-       <div class="footer-container">
-        <div class="breakline"></div>
-        <h2>footer</h2>
-        
-       </div>
+      <div class="breakline"></div>
 
+      <!-- Footer -->
+      <div class="footer-container">
+        <ul class="footer-links">
+          <a target="_blank" href="privacy_and_policy.html"><li>Privacy policy</li></a>
+          <a target="_blank" href="about.html"><li>About us</li></a>
+        </ul>
+
+        <h3 class="footer-website-link" >
+          <span ><a  href="https://retrogamesemulator.com/">retrogamesemulator.com</a></span >
+        </h3>
+      </div>
     </div>
 
     <script src="script.js"></script>

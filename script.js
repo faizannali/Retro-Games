@@ -197,7 +197,19 @@ let mobile_user_input = document.querySelector(".mobile-search");
 
 search_btn.addEventListener("click", (e) => {
   e.stopPropagation();
-  search.style.display = "block";
+
+  if (search.style.display === "block") {
+    // If visible, hide input and show button
+    search.style.display = "none";
+    user_input.value = ""; // Clear input
+    filteredGames = games_database;
+    currentPage = 1;
+    renderGames(filteredGames, currentPage);
+  } else {
+    // Show input and focus
+    search.style.display = "block";
+    user_input.focus();
+  }
 });
 
 document.addEventListener("click", (e) => {
