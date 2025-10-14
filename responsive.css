@@ -34,10 +34,10 @@
   .mobile-options {
     display: block;
   }
-   
-  .mobile-main-heading{
-  display: block;
-}
+
+  .mobile-main-heading {
+    display: block;
+  }
 
   .download-btn-container {
     margin-bottom: 25px;
@@ -50,26 +50,29 @@
     align-items: center;
   }
 
-  .footer-links a{
+  .footer-links a {
     font-size: 10px;
   }
 
-  .footer-website-link a{
+  .footer-website-link a {
     font-size: 10px;
     margin-bottom: 20px;
   }
 
-  .footer-website-link{
+  .footer-website-link {
     margin-top: 20px;
   }
 
-  .footer-links{
+  .footer-links {
     margin-left: 25px;
     margin-top: 25px;
   }
 
-  .cs{
+  .cs {
     text-align: center;
   }
 
+  .ejs_start_button {
+    background-color: yellow;
+  }
 }
